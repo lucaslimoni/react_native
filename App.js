@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -7,6 +8,7 @@
  */
 
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,8 +26,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const App = () => React$Node = () => {
   return (
+    <NavigationContainer>{
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -69,6 +72,7 @@ const App: () => React$Node = () => {
         </ScrollView>
       </SafeAreaView>
     </>
+    }</NavigationContainer>
   );
 };
 
